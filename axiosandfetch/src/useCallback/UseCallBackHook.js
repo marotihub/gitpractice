@@ -28,6 +28,7 @@ const removeUser =useCallback( (id) => {
     const filteredUser = users.filter((user) => user.id !== id);
     setUsers(filteredUser);
   },[users]);
+  //because of useCallback the  list component console not rerender again and again
 
   const handleTextChange=(e)=>{
   setText(e.target.value)
