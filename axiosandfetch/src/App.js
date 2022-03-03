@@ -2,6 +2,7 @@ import './App.css';
 import AxiosApiCall from './component/AxiosApiCall';
 import FetchApicall from './component/FetchApicall';
 import Parent from './pureComponent/Parent';
+import UseCallBackHook from './useCallback/UseCallBackHook';
 
 function App() {
   return (
@@ -10,7 +11,10 @@ function App() {
      {/* <FetchApicall/> */}
      {/* <AxiosApiCall/> */}
      {/* ********Pure component example*** */}
-     <Parent/>
+     {/* <Parent/> */}
+
+     {/* ****useCallback Hook*** */}
+     <UseCallBackHook/>
     </div>
   );
 }
