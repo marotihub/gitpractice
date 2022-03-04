@@ -1,9 +1,11 @@
-import React,  { useState } from 'react';
+import React,  { useMemo, useState } from 'react';
 
 function CalculateFactorial() {
   const [number, setNumber] = useState(1);
   const [inc, setInc] = useState(0);
-  const factorial = factorialOf(number);
+ 
+  const factorial = useMemo(()=>factorialOf(number),[number]);
+  
   const onChange = event => {
     setNumber(Number(event.target.value));
   };
