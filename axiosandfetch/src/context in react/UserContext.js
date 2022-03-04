@@ -1,6 +1,6 @@
 import React, { createContext, createElement } from 'react'
 
-const context= createContext();
+ export const context= createContext();
 const context1= createContext()
 const UserProvider= context.Provider;
 const UserConsumer= context.Consumer;
