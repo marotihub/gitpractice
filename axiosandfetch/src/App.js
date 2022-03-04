@@ -10,6 +10,10 @@ import Home from './lazy loading/Home';
 import { UserProvider } from './context in react/UserContext';
 import {UserProvider1} from './context in react/UserContext'
 import CompA from './context in react/CompA';
+import CountButtonClick from './Ref and UseRef/CountButtonClick';
+import Stopwatch from './Ref and UseRef/Stopwatch';
+import AccesDomElement from './Ref and UseRef/AccesDomElement';
+import InputFocus from './Ref and UseRef/InputFocus';
 
 
 function App() {
@@ -43,12 +47,18 @@ function App() {
      <Home user={value}/> */}
 
      {/* *****Context ******* */}
-
+{/* 
       <UserProvider value='Maroti Mutyepawar'>
         <UserProvider1 value='Nanded'>
               <CompA/>
         </UserProvider1>
-      </UserProvider>
+ </UserProvider> */}
+
+{ /* ************useRef*********** */}
+           {/* <CountButtonClick/> */}
+           {/* <Stopwatch/> */}
+           {/* <AccesDomElement/> */}
+           <InputFocus/>
     </div>
   );
 }
