@@ -7,14 +7,22 @@ import Parent from './pureComponent/Parent';
 import UseCallBackHook from './useCallback/UseCallBackHook';
 import CalculateFactorial from './useMemo/CalculateFactorial';
 import Home from './lazy loading/Home';
+import { UserProvider } from './context in react/UserContext';
+import {UserProvider1} from './context in react/UserContext'
+import CompA from './context in react/CompA';
+
 
 function App() {
-  
-  const [value, setValue]=useState('')
+  // *****lazy loading example values**
+  // const [value, setValue]=useState('')
 
-  const handleChange=(e)=>{
-    setValue(()=>e.target.value)
-  }
+  // const handleChange=(e)=>{
+  //   setValue(()=>e.target.value)
+  // }
+  // ********Context values*******
+  
+
+
   return (
     <div className="App">
      <h1>First Github heading</h1>
@@ -30,10 +38,17 @@ function App() {
      {/* <CalculateFactorial/> */}
 
      {/* *****lazy loading example** */}
-     <input type='text' value={value} onChange={handleChange} />
+     {/* <input type='text' value={value} onChange={handleChange} />
      <h3>{value}</h3>
-     <Home user={value}/>
+     <Home user={value}/> */}
 
+     {/* *****Context ******* */}
+
+      <UserProvider value='Maroti Mutyepawar'>
+        <UserProvider1 value='Nanded'>
+              <CompA/>
+        </UserProvider1>
+      </UserProvider>
     </div>
   );
 }
